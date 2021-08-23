@@ -1,24 +1,27 @@
-import { useState } from 'react'
 import Row from '../components/challenge-1/row';
-import Square from '../components/challenge-1/square'
 
 import styles from '../styles/challengeone.module.css'
 
-
 export default function challengerOne(){
-    let isWhite = false;
-    function populateTable(){
-        
-    }
+    let isWhite = true;
+
     function getIsWhite(){
         isWhite = !isWhite;
         return isWhite;
     }
+
+    function populateTable(){
+        const listRow = []
+        for(let i = 0; i<=7; i++){
+            listRow.push(<Row value={getIsWhite()} />)
+        }
+        return listRow;
+    }
+    
     return (
         <div className={styles.container}>
             <div className={styles.board}>
-                <Row value={getIsWhite()} />
-            
+                {populateTable()}
             </div>
         </div>
     )
