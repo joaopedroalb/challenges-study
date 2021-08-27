@@ -8,7 +8,8 @@ const Home: NextPage = () => {
       <div className={styles.cardContainer}>
       <Card title="Chess Challenge" 
             description="Challenge to create a chess board interface" 
-            urlImg="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Chess_Board.svg/1024px-Chess_Board.svg.png"/>
+            urlImg="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Chess_Board.svg/1024px-Chess_Board.svg.png"
+            urlPath="challenger-1"/>
       </div>
     </div>
   )
