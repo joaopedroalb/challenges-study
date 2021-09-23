@@ -2,7 +2,7 @@ import Row from '../components/challenge-1/row';
 
 import styles from '../styles/challengeone.module.css'
 
-export default function challengerOne(){
+export default function ChallengerOne(){
     let isWhite = true;
 
     function getIsWhite(){
