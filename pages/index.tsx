@@ -16,6 +16,11 @@ const Home: NextPage = () => {
               urlImg="https://media.istockphoto.com/videos/push-button-hand-icon-on-white-background-cursor-of-computer-mouse-video-id1250308810?s=640x640"
               urlPath="Challenger-2"
         />
+        <Card title ="Counter Challenger"
+              description = "Create a Couunter to training the useState of react js"
+              urlImg="https://www.historiadetudo.com/wp-content/uploads/2015/03/calculadora-1.jpg"
+              urlPath="Challenger-3"
+        />
       </div>
     </div>
   )
