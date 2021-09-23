@@ -17,7 +17,7 @@ const Home: NextPage = () => {
               urlPath="Challenger-2"
         />
         <Card title ="Counter Challenger"
-              description = "Create a Couunter to training the useState of react js"
+              description = "Create a Counter to training the useState of react js"
               urlImg="https://www.historiadetudo.com/wp-content/uploads/2015/03/calculadora-1.jpg"
               urlPath="Challenger-3"
         />

@@ -18,14 +18,11 @@ export default function ChallengerThree(){
     
 
     function increase(){
-        setNumber(number+numberAux);
+        console.log(isNaN(numberAux))
+        isNaN(numberAux)? setNumber(number):setNumber(number+numberAux);
     }
     function decrease(){
-        setNumber(number-numberAux);
-    }
-
-    function onChangeAuxValue(changeArgs:number){
-        setNumberAux(changeArgs)
+        isNaN(numberAux)? setNumber(number):setNumber(number-numberAux);
     }
     return(
         <div style={style1}>
@@ -37,8 +34,8 @@ export default function ChallengerThree(){
             </div>
             <br/>
             <div style={{display:"flex",gap:"10px"}}>
-                <span>Change the value in increate/decrease</span>
-                <input type="number" onChange={e=>onChangeAuxValue(e.target.valueAsNumber)} value={numberAux} style={styleInputAux}/>
+                <span>Change counter value</span>
+                <input type="number" onChange={e=>setNumberAux(e.target.valueAsNumber)} value={numberAux} style={styleInputAux}/>
             </div>
         </div>
     )
