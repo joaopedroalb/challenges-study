@@ -16,10 +16,15 @@ const Home: NextPage = () => {
               urlImg="https://media.istockphoto.com/videos/push-button-hand-icon-on-white-background-cursor-of-computer-mouse-video-id1250308810?s=640x640"
               urlPath="Challenger-2"
         />
-        <Card title ="Counter Challenger"
+        <Card title ="Counter Challenge"
               description = "Create a Counter to training the useState of react js"
               urlImg="https://www.historiadetudo.com/wp-content/uploads/2015/03/calculadora-1.jpg"
               urlPath="Challenger-3"
+        />
+        <Card title= "Loteria do Azar"
+              description = "Simulate a lottery to deepen the concepts of useStates and component communication "
+              urlImg = "https://fdr.com.br/wp-content/uploads/2020/07/loterias-750x422.png"
+              urlPath="Challenger-4"
         />
       </div>
     </div>
