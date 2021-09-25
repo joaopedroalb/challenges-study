@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 120px;
+    background-color: rgb(255, 255, 255);
+    height: 3.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.75rem;
+}
+
+.inputQuina{
+    width: 50%;
+    border-radius: .15rem;
+    border: 1px solid black;
+    height: 1.6rem;
+
+}
+
+.container input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
