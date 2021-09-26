@@ -7,7 +7,7 @@ export default function RowBalls(){
     const [preLoad, setPreLoad] = useState(false);
 
     const [listAllNumbers,setListAllNumbers] = useState(Array.from({length:80},(_,i)=>i+1));
-    const [listBalls,setListBalls] = useState(Array.from({length:6}))
+    const [listBalls] = useState(Array.from({length:6}))
 
     function roll(){
         for(let i = 0; i<6 ; i++){
