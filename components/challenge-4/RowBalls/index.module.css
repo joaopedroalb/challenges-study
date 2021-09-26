@@ -1,0 +1,22 @@
+.containerBg{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.btnRoll{
+    width: 7%;
+    border-radius: .10rem;
+    border: 1px;
+    background: #fee440;
+    cursor: pointer;
+}

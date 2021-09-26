@@ -1,3 +1,4 @@
+import RowBalls from '../components/challenge-4/RowBalls'
 import RowQuina from '../components/challenge-4/RowQuina'
 import styles from '../styles/challengefour.module.css'
 
@@ -10,6 +11,7 @@ export default function ChallengerFour(){
                 <span><q>Tente a sorte, mas provavelmente fique só na tentativa</q></span>
             </div>
             <RowQuina/>
+            <RowBalls/>
         </div>
     )
 }
