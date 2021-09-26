@@ -18,7 +18,7 @@ export default function ChallengerFour(){
                 <span><q>Tente a sorte, mas provavelmente fique só na tentativa</q></span>
             </div>
             <RowQuina list={listInputsValues} eventOnChange={onChangeInputeValue}/>
-            <RowBalls/>
+            <RowBalls listInputs={listInputsValues}/>
         </div>
     )
 }
