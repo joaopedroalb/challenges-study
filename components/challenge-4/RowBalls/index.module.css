@@ -11,10 +11,11 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    gap: 50px;
 }
 
 .btnRoll{
-    width: 7%;
+    width: 9%;
     border-radius: .10rem;
     border: 1px;
     background: #fee440;

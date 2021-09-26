@@ -22,6 +22,12 @@ export default function RowBalls(props:{listInputs:Array<number>}){
         setPreLoad(true);
     }
 
+    function acertou(value:any){
+        if(preLoad)
+            return props.listInputs.indexOf(value) !== -1
+        return false
+    }
+
     const textRes = (correct:number) =>{
         if(correct == 0)
             return `Você errou tudo ... que azar ...`
@@ -41,7 +47,7 @@ export default function RowBalls(props:{listInputs:Array<number>}){
             <div className={style.container}>
             {listBalls.map((_,i)=>{
                 return(
-                    <Ball key={i} value={preLoad?listBalls[i]:"?"}/>
+                    <Ball key={i} value={preLoad?listBalls[i]:"?"} acertouBool={acertou(listBalls[i])}/>
                 )
             })}
 
