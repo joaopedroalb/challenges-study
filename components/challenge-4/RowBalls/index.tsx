@@ -6,7 +6,7 @@ export default function RowBalls(props:{listInputs:Array<any>}){
 
     const [preLoad, setPreLoad] = useState(false);
 
-    const [listAllNumbers,setListAllNumbers] = useState(Array.from({length:80},(_,i)=>i+1));
+    const [listAllNumbers,setListAllNumbers] = useState(Array.from({length:60},(_,i)=>i+1));
     const [listBalls] = useState(Array.from({length:6}))
     const [correctBalls,setCorrectBalls] = useState(0);
 
@@ -18,7 +18,7 @@ export default function RowBalls(props:{listInputs:Array<any>}){
             //allNumbersAux = allNumbersAux.splice(index,1);
         }
         setCorrectBalls(listBalls.filter(value=>props.listInputs.indexOf(value)!==-1).length)
-        setListAllNumbers(Array.from({length:80},(_,i)=>i+1))
+        setListAllNumbers(Array.from({length:60},(_,i)=>i+1))
         setPreLoad(true);
     }
 
