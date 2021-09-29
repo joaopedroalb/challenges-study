@@ -17,6 +17,7 @@ export default function RowBalls(props:{listInputs:Array<any>}){
             setListAllNumbers(listAllNumbers.splice(index,1))
             //allNumbersAux = allNumbersAux.splice(index,1);
         }
+        console.log(props.listInputs)
         setCorrectBalls(listBalls.filter(value=>props.listInputs.indexOf(value)!==-1).length)
         setListAllNumbers(Array.from({length:60},(_,i)=>i+1))
         setPreLoad(true);
