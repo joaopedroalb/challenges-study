@@ -15,9 +15,7 @@ export default function RowBalls(props:{listInputs:Array<any>}){
             const index = Math.floor(Math.random()*listAllNumbers.length);
             listBalls[i] = listAllNumbers[index]
             setListAllNumbers(listAllNumbers.splice(index,1))
-            //allNumbersAux = allNumbersAux.splice(index,1);
         }
-        console.log(props.listInputs)
         setCorrectBalls(listBalls.filter(value=>props.listInputs.indexOf(value)!==-1).length)
         setListAllNumbers(Array.from({length:60},(_,i)=>i+1))
         setPreLoad(true);
@@ -46,7 +44,7 @@ export default function RowBalls(props:{listInputs:Array<any>}){
     return(
         <div className={style.containerBg}>
             <div className={style.container}>
-            {listBalls.map((_,i)=>{
+            {listBalls.sort((a:any,b:any)=>a-b).map((_,i)=>{
                 return(
                     <Ball key={i} value={preLoad?listBalls[i]:"?"} acertouBool={acertou(listBalls[i])}/>
                 )
