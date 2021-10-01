@@ -3,6 +3,7 @@ import RowQuina from '../components/challenge-4/RowQuina'
 import styles from '../styles/challengefour.module.css'
 
 import {useState} from 'react'
+import Gohome from '../components/Gohome'
 
 export default function ChallengerFour(){
     const [listInputsValues] = useState(Array.from({length:8},(_,i)=>i+1))
@@ -19,6 +20,7 @@ export default function ChallengerFour(){
             </div>
             <RowQuina list={listInputsValues} eventOnChange={onChangeInputeValue}/>
             <RowBalls listInputs={listInputsValues}/>
+            <Gohome/>
         </div>
     )
 }

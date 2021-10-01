@@ -1,4 +1,5 @@
 import { CSSProperties, useState } from "react"
+import Gohome from "../components/Gohome";
 
 export default function ChallengerTwo(){
     const myStyle:CSSProperties = {
@@ -28,6 +29,7 @@ export default function ChallengerTwo(){
         <div style={myStyle} onMouseMove={OnMoveMouse}>
             <span>Eixo X: {boolChange?eixoX:"?"}</span>
             <span>Eixo Y: {boolChange?eixoY:"?"}</span>
+            <Gohome/>
         </div>
     )
 }

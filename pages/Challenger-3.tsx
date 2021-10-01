@@ -1,4 +1,5 @@
 import { CSSProperties, useState, useRef } from "react"
+import Gohome from "../components/Gohome";
 
 export default function ChallengerThree(){
     const style1:CSSProperties = {width:"100%"
@@ -37,6 +38,7 @@ export default function ChallengerThree(){
                 <span>Change counter value</span>
                 <input type="number" onChange={e=>setNumberAux(e.target.valueAsNumber)} value={numberAux} style={styleInputAux}/>
             </div>
+            <Gohome/>
         </div>
     )
 }
