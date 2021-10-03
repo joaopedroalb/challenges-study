@@ -1,0 +1,32 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    flex-direction: column;
+    background-color: #222;
+    color: #fff;
+}
+
+.inputsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputsContainer input{
+    border: 0;
+    padding: .5rem;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 1rem;
+}
+
+.inputsContainer input:focus{
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
