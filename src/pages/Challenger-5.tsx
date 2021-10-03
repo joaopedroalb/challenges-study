@@ -11,9 +11,11 @@ export default function ChallengerFive(){
     const [search,setSearch] = useState("");
 
     function handleChangeName(str:string){
-        if(str != "")
+        console.log(str.split(" ").join(""))
+
+        if(str.split(" ").join("") !== "")
             setName(str)
-        if(str === "")
+        if(str.split(" ").join("") === "")
             setName("Desconhecido")
     }
 
