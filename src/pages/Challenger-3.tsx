@@ -1,5 +1,5 @@
 import { CSSProperties, useState, useRef } from "react"
-import Gohome from "../../components/Gohome";
+import Gohome from "../components/Gohome";
 
 export default function ChallengerThree(){
     const style1:CSSProperties = {width:"100%"
