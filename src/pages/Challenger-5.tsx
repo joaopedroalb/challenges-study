@@ -26,10 +26,10 @@ export default function ChallengerFive(){
     return(
         <div className={styles.container}>
             <div className={styles.inputsContainer}>
-                <h1>Digite seu nome</h1>
+                <h2>Digite seu nome</h2>
                 <input type="text" onChange={e=>handleChangeName(e.target.value)}/>
                 <br/>
-                <h1>O que deseja pesquisar ? </h1>
+                <h2>O que deseja pesquisar ? </h2>
                 <input type="text" onChange={e=>setSearch(e.target.value)}/>
             </div>
             <Link href={url()}><button>Pesquisar</button></Link>
