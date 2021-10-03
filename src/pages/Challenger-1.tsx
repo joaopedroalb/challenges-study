@@ -1,7 +1,7 @@
-import Row from '../components/challenge-1/row';
-import Gohome from '../components/Gohome';
+import Row from '../../components/challenge-1/row';
+import Gohome from '../../components/Gohome';
 
-import styles from '../styles/challengeone.module.css'
+import styles from '../../styles/challengeone.module.css'
 
 export default function ChallengerOne(){
     let isWhite = true;

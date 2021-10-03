@@ -1,5 +1,5 @@
 import { CSSProperties, useState } from "react"
-import Gohome from "../components/Gohome";
+import Gohome from "../../components/Gohome";
 
 export default function ChallengerTwo(){
     const myStyle:CSSProperties = {

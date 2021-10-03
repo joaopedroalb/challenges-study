@@ -1,9 +1,9 @@
-import RowBalls from '../components/challenge-4/RowBalls'
-import RowQuina from '../components/challenge-4/RowQuina'
-import styles from '../styles/challengefour.module.css'
+import RowBalls from '../../components/challenge-4/RowBalls'
+import RowQuina from '../../components/challenge-4/RowQuina'
+import styles from '../../styles/challengefour.module.css'
 
 import {useState} from 'react'
-import Gohome from '../components/Gohome'
+import Gohome from '../../components/Gohome'
 
 export default function ChallengerFour(){
     const [listInputsValues] = useState(Array.from({length:8},(_,i)=>i+1))

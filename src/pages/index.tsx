@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
-import Card from '../components/Card'
-import styles from '../styles/Home.module.css'
+import Card from '../../components/Card'
+import styles from '../../styles/Home.module.css'
 
 const Home: NextPage = () => {
   return (
