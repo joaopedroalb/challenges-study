@@ -26,6 +26,11 @@ const Home: NextPage = () => {
               urlImg = "https://fdr.com.br/wp-content/uploads/2020/07/loterias-750x422.png"
               urlPath="Challenger-4"
         />
+        <Card title= "Rotas Challenge"
+              description = "Challenge para utilizar um pouco do uso de rotas do NextJs"
+              urlImg = "https://s2.glbimg.com/V-XqeFCP1G9uD39J7r8wM3jrG5Q=/620x430/e.glbimg.com/og/ed/f/original/2017/03/14/thinkstockphotos-612491256_1.jpg"
+              urlPath="Challenger-5"
+        />
       </div>
     </div>
   )
