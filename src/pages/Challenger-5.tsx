@@ -3,7 +3,6 @@ import styles from "../../styles/challengerfive.module.css"
 
 import { useState } from "react";
 import Link from "next/link"
-import link from "next/link";
 
 export default function ChallengerFive(){
 

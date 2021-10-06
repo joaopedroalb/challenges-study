@@ -31,6 +31,11 @@ const Home: NextPage = () => {
               urlImg = "https://s2.glbimg.com/V-XqeFCP1G9uD39J7r8wM3jrG5Q=/620x430/e.glbimg.com/og/ed/f/original/2017/03/14/thinkstockphotos-612491256_1.jpg"
               urlPath="Challenger-5"
         />
+        <Card title= "Color Choose"
+              description = "Challenge para entender como se usa o basico de uma API no NextJs"
+              urlImg = "https://cdn.discordapp.com/attachments/469630958811742212/895374204495597628/wallpaper.png"
+              urlPath="Challenger-6"
+        />
       </div>
     </div>
   )
