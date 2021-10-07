@@ -1,7 +1,6 @@
 .container{
     width: 190px;
     min-height: 260px;
-    cursor: pointer;
     border-bottom: 1px solid #0000004d;
     border-right: 1px solid #0000004d;
     border-left: 1px solid #0000004d;
@@ -10,6 +9,8 @@
     align-items: center;
     border-radius: 0.25rem;
     background-color: #fff;
+    justify-content: space-between;
+    padding-bottom:1rem;
 }
 
 .imageContainer{
@@ -34,11 +35,29 @@
     text-align: center;
 }
 
-.infoContainer h1{
+.infoContainer h2{
     margin: 0;
     font-size: 1.25rem;
 }
 
-.infoContainer span{
-   font-size: .75rem;
+.infoContainer h3{
+    margin: 0;
+    font-size: .75rem;
+    font-weight: 400;
+}
+
+.container button{
+    cursor: pointer;
+    width: 8rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 0;
+    background-color: #3a86ff;
+    color: #fff;
+    font-weight: 500;
+    transition: 0.45s;
+}
+
+.container button:hover{
+    filter:brightness(0.9);
 }
