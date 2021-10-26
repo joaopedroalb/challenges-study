@@ -36,6 +36,11 @@ const Home: NextPage = () => {
               urlImg = "https://cdn.discordapp.com/attachments/469630958811742212/895374204495597628/wallpaper.png"
               urlPath="Challenger-6"
         />
+        <Card title= "Simple Forms"
+              description = "Challenge para entender como se usa o basico de uma API no NextJs utilizando um forms"
+              urlImg = "https://cdn.discordapp.com/attachments/469630958811742212/902525997713334282/1jdgeDJ3LGuKBigNLDoyEEg.png"
+              urlPath="Challenger-7"
+        />
       </div>
     </div>
   )
