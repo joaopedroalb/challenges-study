@@ -1,8 +1,48 @@
-.container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.inputContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnSave {
+  width: 120px;
+  height: 40px;
+  border-radius: 2rem;
+  border: 0;
+  background: #43e9e9;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.container ul {
+  list-style: none;
+}
+
+.inputContentTitle {
+  margin: 0;
+}
+
+.tableContainer {
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.tableHeaderTitle {
+  margin: 0 4px;
 }
