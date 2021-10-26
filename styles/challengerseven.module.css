@@ -1,11 +1,11 @@
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
   background-color: #e2abed;
 }
 
@@ -46,11 +46,12 @@
   margin: 0;
 }
 
-.tableContainer {
-  border: 1px solid;
-  border-radius: 4px;
+.cardContainer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 0 3rem;
 }
 
-.tableHeaderTitle {
-  margin: 0 4px;
-}
+

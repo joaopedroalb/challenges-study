@@ -3,6 +3,7 @@ import styles from "../../styles/challengerseven.module.css";
 import { useState } from "react";
 import Gohome from "../components/Gohome";
 import PickColor from "../components/PickColor";
+import ProfileCard from "../components/ProfileCard";
 
 interface IUser {
   name: string;
@@ -96,17 +97,16 @@ export default function ChallengerSeven() {
         <button onClick={saveData} className={styles.btnSave}>Send</button>
 
       </div>
+      
+      <br/><br/>
 
-
-      <ul>
-        {users.map((e: IUser, i: number) => {
-                return (
-                <li key={i}>
-                   <p>{e.name} {'\u00A0'} {e.age} {'\u00A0'} {e.city} {'\u00A0'} {e.maritalStatus} {'\u00A0'} {e.color}</p>
-                </li>
-                );
-            })}
-      </ul>
+      <div className={styles.cardContainer}>
+      {users.map((e: IUser, i: number) => {
+          return (
+            <ProfileCard user={e} key={i}/>
+          );
+      })}
+      </div>
 
       <Gohome/>
     </div>
