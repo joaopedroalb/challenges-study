@@ -5,6 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
+  background-color: #e2abed;
+}
+
+.container input:focus{
+  outline: none;
 }
 
 .formContainer {
@@ -16,6 +22,7 @@
 
 .inputContainer {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -24,10 +31,11 @@
   height: 40px;
   border-radius: 2rem;
   border: 0;
-  background: #43e9e9;
+  background: #25092a;
   font-size: 1.1rem;
   font-weight: 700;
   cursor: pointer;
+  color: #fff;
 }
 
 .container ul {

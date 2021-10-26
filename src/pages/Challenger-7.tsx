@@ -2,21 +2,24 @@ import styles from "../../styles/challengerseven.module.css";
 
 import { useState } from "react";
 import Gohome from "../components/Gohome";
+import PickColor from "../components/PickColor";
 
 interface IUser {
   name: string;
   age: number;
   maritalStatus:string;
   city:string
+  color:string
 }
 
 
 export default function ChallengerSeven() {
   const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
+  const [age, setAge] = useState(18);
   const [users, setUsers] = useState<IUser[]>([]);
   const [maritalStatus, setMaritalStatus] = useState("Solteiro(a)")
   const [city, setCity] = useState("");
+  const [color,setColor] = useState("");
 
   const statusArr = ["Solteiro(a)","Casado(a)","União estável", "Viúvo(a)"]
 
@@ -24,7 +27,7 @@ export default function ChallengerSeven() {
     if(age>12 && name.length>2){
         await fetch("/api/forms", {
             method: "POST",
-            body: JSON.stringify({ name, age,maritalStatus,city }),
+            body: JSON.stringify({ name, age,maritalStatus,city,color}),
           });
       
           const resp = await fetch("/api/forms");
@@ -55,7 +58,7 @@ export default function ChallengerSeven() {
                     Digite a idade do usuario
                 </h5>
                 <input
-                    min={17}
+                    min={18}
                     type="number"
                     value={age}
                     onChange={(e) => setAge(e.target.valueAsNumber)}
@@ -86,6 +89,8 @@ export default function ChallengerSeven() {
                 </select>
             </div>
 
+            <PickColor setColorExtenal={setColor}/>
+
           </div>
 
         <button onClick={saveData} className={styles.btnSave}>Send</button>
@@ -94,11 +99,10 @@ export default function ChallengerSeven() {
 
 
       <ul>
-        <li><h4>NOME {'\u00A0'}{'\u00A0'} IDADE {'\u00A0'} CIDADE {'\u00A0'} Estado Civil</h4></li>
         {users.map((e: IUser, i: number) => {
                 return (
                 <li key={i}>
-                   <p>{e.name} {'\u00A0'} {e.age} {'\u00A0'} {e.city} {'\u00A0'} {e.maritalStatus}</p>
+                   <p>{e.name} {'\u00A0'} {e.age} {'\u00A0'} {e.city} {'\u00A0'} {e.maritalStatus} {'\u00A0'} {e.color}</p>
                 </li>
                 );
             })}

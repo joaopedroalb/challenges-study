@@ -2,12 +2,10 @@ import { useEffect, useState } from 'react';
 import styles from '../../styles/challengersix.module.css'
 
 import Gohome from "../components/Gohome";
-import Image from 'next/image'
-import colorChoose from '../../public/color-choose.svg'
 
 export default function ChallengerSix(){
     const [colors,setColors] = useState<any>(null);
-    const[colorBg,setColorBg] = useState("");
+    const [colorBg,setColorBg] = useState("");
 
     useEffect(()=>{
         fetch("http://localhost:3000/api/123")
