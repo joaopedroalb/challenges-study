@@ -3,6 +3,9 @@ import styles from "../../styles/challengerfive.module.css"
 
 import { useState } from "react";
 import Link from "next/link"
+import Image from "next/image"
+
+import routerImage from "../../public/router-search.svg"
 
 export default function ChallengerFive(){
 
@@ -25,6 +28,7 @@ export default function ChallengerFive(){
     return(
         <div className={styles.container}>
             <div className={styles.inputsContainer}>
+                <Image src={routerImage} width={200} height={200}/>
                 <h2>Digite seu nome</h2>
                 <input type="text" onChange={e=>handleChangeName(e.target.value)}/>
                 <br/>
