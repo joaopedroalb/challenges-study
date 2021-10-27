@@ -6,18 +6,18 @@ const Home: NextPage = () => {
   return (
     <div className={styles.container}>
       <div className={styles.cardContainer}>
-        <Card title="Chess Challenge" 
-              description="Challenge to create a chess board interface" 
+        <Card title="Chessboard Create" 
+              description="Challenge to generate a chessboard" 
               urlImg="https://cdn.discordapp.com/attachments/469630958811742212/902620272677515304/1024px-Chess_Board.png"
               urlPath="Challenger-1"
         />
-        <Card title = "Mouse Challenge"
+        <Card title = "Mouse Move"
               description ="Challenge to work with mouses events"
               urlImg="https://cdn.discordapp.com/attachments/469630958811742212/902620381494542416/push-button-hand-icon-on-white-background-cursor-of-computer-mouse-video-id1250308810.png"
               urlPath="Challenger-2"
         />
         <Card title ="Counter Challenge"
-              description = "Create a Counter to training the useState of react js"
+              description = "Create a Counter to practice the useState of ReactJS"
               urlImg="https://cdn.discordapp.com/attachments/469630958811742212/902620498423316490/calculadora-1.png"
               urlPath="Challenger-3"
         />
