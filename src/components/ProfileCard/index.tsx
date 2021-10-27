@@ -12,9 +12,9 @@ export default function ProfileCard(props:{user:IUser}){
     return(
         <article style={{backgroundColor:`${props.user.color!=""?props.user.color:"#fff"}`}} className={styles.container}>
             <header>
-                <h2>{props.user.name}</h2>
+                <h2 className={styles.headerTitle}>{props.user.name}</h2>
             </header>
-            <div>
+            <div className={styles.infoText}>
                 <p>Age: {props.user.age}</p>
                 <p>City: {props.user.city}</p>
                 <p>Estado Civil: {props.user.maritalStatus}</p>

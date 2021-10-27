@@ -9,7 +9,7 @@
   background-color: #e2abed;
 }
 
-.container input:focus{
+.container input:focus {
   outline: none;
 }
 
@@ -42,16 +42,33 @@
   list-style: none;
 }
 
+.inputContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.inputContent input {
+  height: 30px;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0 0.9rem;
+}
+
+.inputContent select {
+  height: 30px;
+  border: 0;
+  border-radius: 4px;
+}
+
 .inputContentTitle {
   margin: 0;
 }
 
-.cardContainer{
+.cardContainer {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
   padding: 0 3rem;
 }
-
-
