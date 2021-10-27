@@ -5,30 +5,30 @@ import Gohome from "../components/Gohome";
 import PickColor from "../components/PickColor";
 import ProfileCard from "../components/ProfileCard";
 
-interface IUser {
+interface ITask {
   name: string;
-  age: number;
-  maritalStatus:string;
-  city:string
+  remainTime: number;
+  status:string;
+  userStory:string
   color:string
 }
 
 
 export default function ChallengerSeven() {
   const [name, setName] = useState("");
-  const [age, setAge] = useState(18);
-  const [users, setUsers] = useState<IUser[]>([]);
-  const [maritalStatus, setMaritalStatus] = useState("Solteiro(a)")
-  const [city, setCity] = useState("");
+  const [remainTime, setRemainTime] = useState(0);
+  const [users, setUsers] = useState<ITask[]>([]);
+  const [status, setStatus] = useState("New")
+  const [userStory, setUserStory] = useState("");
   const [color,setColor] = useState("");
-
-  const statusArr = ["Solteiro(a)","Casado(a)","União estável", "Viúvo(a)"]
+  
+  const statusArr = ["New","Active","Closed", "Removed","Blocked"]
 
   async function saveData() {
-    if(age>12 && name.length>2){
+    if(remainTime>=0 && name.length>2){
         await fetch("/api/forms", {
             method: "POST",
-            body: JSON.stringify({ name, age,maritalStatus,city,color}),
+            body: JSON.stringify({ name, remainTime,status,userStory,color}),
           });
       
           const resp = await fetch("/api/forms");
@@ -41,12 +41,12 @@ export default function ChallengerSeven() {
   return (
     <div className={styles.container}>
 
-      <h1>FORMS</h1>
+      <h1>Task Generate Forms</h1>
 
       <div className={styles.formContainer}>
           <div className={styles.inputContainer}>
             <div className={styles.inputContent}>
-                <h5 className={styles.inputContentTitle}>Digite o nome do usuario</h5>
+                <h5 className={styles.inputContentTitle}>Task Name</h5>
                 <input
                     type="text"
                     value={name}
@@ -55,31 +55,31 @@ export default function ChallengerSeven() {
             </div>
 
             <div className={styles.inputContent}>
-                <h5 className={styles.inputContentTitle}>
-                    Digite a idade do usuario
-                </h5>
-                <input
-                    min={18}
-                    type="number"
-                    value={age}
-                    onChange={(e) => setAge(e.target.valueAsNumber)}
-                />
-            </div>
-
-            <div className={styles.inputContent}>
-                <h5 className={styles.inputContentTitle}>Digite a cidade do usuario</h5>
+                <h5 className={styles.inputContentTitle}>User Story Name</h5>
                 <input
                     type="text"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
+                    value={userStory}
+                    onChange={(e) => setUserStory(e.target.value)}
                 />
             </div>
 
             <div className={styles.inputContent}>
                 <h5 className={styles.inputContentTitle}>
-                    Digite o estado civil do usuario
+                  Remaining Time
                 </h5>
-                <select onChange={e=>setMaritalStatus(e.target.value)}>
+                <input
+                    min={0}
+                    type="number"
+                    value={remainTime}
+                    onChange={(e) => setRemainTime(e.target.valueAsNumber)}
+                />
+            </div>
+
+            <div className={styles.inputContent}>
+                <h5 className={styles.inputContentTitle}>
+                    STATUS
+                </h5>
+                <select onChange={e=>setStatus(e.target.value)}>
                     {
                     statusArr.map((e:any,i:number)=>{
                         return(
@@ -101,9 +101,9 @@ export default function ChallengerSeven() {
       <br/><br/>
 
       <div className={styles.cardContainer}>
-      {users.map((e: IUser, i: number) => {
+      {users.map((e: ITask, i: number) => {
           return (
-            <ProfileCard user={e} key={i}/>
+            <ProfileCard task={e} key={i}/>
           );
       })}
       </div>

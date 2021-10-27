@@ -1,23 +1,23 @@
 import styles from "./index.module.css"
 
-interface IUser {
+interface ITask {
     name: string;
-    age: number;
-    maritalStatus:string;
-    city:string
+    remainTime: number;
+    status:string;
+    userStory:string
     color:string
   }
 
-export default function ProfileCard(props:{user:IUser}){
+export default function ProfileCard(props:{task:ITask}){
     return(
-        <article style={{backgroundColor:`${props.user.color!=""?props.user.color:"#fff"}`}} className={styles.container}>
+        <article style={{backgroundColor:`${props.task.color!=""?props.task.color:"rgb(204 76 245)"}`}} className={styles.container}>
             <header>
-                <h2 className={styles.headerTitle}>{props.user.name}</h2>
+                <h2 className={styles.headerTitle}>{props.task.name}</h2>
             </header>
             <div className={styles.infoText}>
-                <p>Age: {props.user.age}</p>
-                <p>City: {props.user.city}</p>
-                <p>Estado Civil: {props.user.maritalStatus}</p>
+                <p><strong>User Story :</strong> {props.task.userStory}</p>
+                <p><strong>Remain Time:</strong> {props.task.remainTime}</p>
+                <p style={{alignSelf:"center"}}><strong>{props.task.status}</strong></p>
             </div>
         </article>
     )

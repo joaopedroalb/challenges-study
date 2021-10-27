@@ -1,14 +1,18 @@
 .container{
     width: 190px;
-    height: 210px;
+    min-height: 210px;
     border-radius: 0.65rem;
     display: flex;
     flex-direction: column;
     padding: 0 4px;
+    gap: 1rem;
 }
 
 .headerTitle{
     text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 1rem 0 0 0 ;
 }
 
 .infoText{
