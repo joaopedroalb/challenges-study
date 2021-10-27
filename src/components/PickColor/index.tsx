@@ -18,8 +18,8 @@ export default function PickColor(props:{setColorExtenal:any}){
     }
 
     return(
-        <div className={styles.container}>
-            <h4 className={styles.titleQuestion}>Escolha uma cor</h4>
+        <div className={styles.containerPickColor}>
+            <h4 className={styles.titleQuestion}>Pick a Color</h4>
             <div className={styles.colorSelection}>
             {
                 colors?.colors.map((e:any,i:number)=>{

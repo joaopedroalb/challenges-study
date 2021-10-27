@@ -1,7 +1,8 @@
-.container{
+.containerPickColor{
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 4px;
 }
 
 .titleQuestion{
@@ -12,12 +13,14 @@
     display: flex;
     min-width: 150px;
     height: 30px;
+    gap: 2px;
 }
 
 .colorBlock,.colorBlockSelected{
     width: 30px;
     flex: 1;
     cursor: pointer;
+    border-radius: 50%;
 }
 
 .colorBlockSelected{
@@ -29,7 +32,4 @@
 .colorBlockSelected::after{
     content: '✓';
     color: #fff;
-    border: 1px solid;
-    padding: 1px 3px;
-    font-size: 0.8rem;
 }
