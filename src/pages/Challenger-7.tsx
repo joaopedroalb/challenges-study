@@ -1,6 +1,6 @@
 import styles from "../../styles/challengerseven.module.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Gohome from "../components/Gohome";
 import PickColor from "../components/PickColor";
 import ProfileCard from "../components/ProfileCard";
@@ -36,6 +36,16 @@ export default function ChallengerSeven() {
           setUsers(usersJson);
           console.log(users);
     }
+  }
+
+  useEffect(()=>{
+    fetchMyApi();
+  },[])
+
+  async function fetchMyApi(){
+    const resp = await fetch("/api/forms");
+    const usersJson = await resp.json();
+    setUsers(usersJson);
   }
 
   return (
