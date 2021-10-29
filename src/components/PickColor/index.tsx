@@ -11,7 +11,7 @@ export default function PickColor(props:{setColorExtenal:any}){
     },[])
 
     async function getColorsApi(){
-        const resp = await fetch("http://localhost:3000/api/color")
+        const resp = await fetch("/api/color")
         const respJson = await resp.json();
         console.log(respJson)
         setColors(respJson);
