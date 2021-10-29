@@ -17,7 +17,7 @@ interface ITask {
 export default function ChallengerSeven() {
   const [name, setName] = useState("");
   const [remainTime, setRemainTime] = useState(0);
-  const [users, setUsers] = useState<ITask[]>([]);
+  const [tasks, setTaks] = useState<ITask[]>([]);
   const [status, setStatus] = useState("New")
   const [userStory, setUserStory] = useState("");
   const [color,setColor] = useState("");
@@ -32,9 +32,9 @@ export default function ChallengerSeven() {
           });
       
           const resp = await fetch("/api/forms");
-          const usersJson = await resp.json();
-          setUsers(usersJson);
-          console.log(users);
+          const taskJson = await resp.json();
+          setTaks(taskJson);
+          console.log(tasks);
     }
   }
 
@@ -44,8 +44,17 @@ export default function ChallengerSeven() {
 
   async function fetchMyApi(){
     const resp = await fetch("/api/forms");
-    const usersJson = await resp.json();
-    setUsers(usersJson);
+    const taskJson = await resp.json();
+    setTaks(taskJson);
+  }
+
+  async function deleteTasks(){
+    await fetch("/api/forms",{
+      method:"DELETE"
+    });
+
+    setTaks([]);
+
   }
 
   return (
@@ -101,7 +110,7 @@ export default function ChallengerSeven() {
             </div>
 
             <PickColor setColorExtenal={setColor}/>
-
+            <button className={styles.btnDelete} onClick={deleteTasks}>Delete All</button>
           </div>
 
         <button onClick={saveData} className={styles.btnSave}>Send</button>
@@ -111,11 +120,12 @@ export default function ChallengerSeven() {
       <br/><br/>
 
       <div className={styles.cardContainer}>
-      {users.map((e: ITask, i: number) => {
+      {tasks.map((e: ITask, i: number) => {
           return (
             <ProfileCard task={e} key={i}/>
           );
       })}
+      
       </div>
 
       <Gohome/>

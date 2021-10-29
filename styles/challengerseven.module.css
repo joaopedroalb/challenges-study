@@ -24,6 +24,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: flex-end;
 }
 
 .btnSave {
@@ -73,4 +74,15 @@
   flex-wrap: wrap;
   gap: 3rem;
   padding: 0 3rem;
+}
+
+.btnDelete{
+  width: 100px;
+  height: 40px;
+  border-radius: 2rem;
+  border: 0;
+  background: rgb(226, 54, 54);
+  font-weight: 700;
+  cursor: pointer;
+  color: #fff;
 }

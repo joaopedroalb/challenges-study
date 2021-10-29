@@ -1,12 +1,15 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-const users:any = []
+let users:any = []
 
 export default function form(req:NextApiRequest,res:NextApiResponse){
     if(req.method==="POST"){
         post(req,res)
     }else if(req.method==="GET"){
         res.status(200).json(users)
+    }else if(req.method==="DELETE"){
+        users = [];
+        res.status(200).send("")
     }else{
         res.status(405).send("error")
     }
