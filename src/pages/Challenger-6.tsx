@@ -8,7 +8,7 @@ export default function ChallengerSix(){
     const [colorBg,setColorBg] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/123")
+        fetch("http://localhost:3000/api/color")
             .then(resp => resp.json())
             .then(setColors)
     },[])

@@ -7,7 +7,7 @@ export default function PickColor(props:{setColorExtenal:any}){
     const [colorSelected,setColorSelected] = useState("");
 
     useEffect(()=>{
-        fetch("http://localhost:3000/api/123")
+        fetch("http://localhost:3000/api/color")
             .then(resp => resp.json())
             .then(setColors)
     },[])
